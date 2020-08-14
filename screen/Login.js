@@ -16,7 +16,7 @@ const LoginScreen = ({ props, navigation }) => {
 
   const loginAuth = () => {
     try {
-      fetch("localhost:5000/auth", {
+      fetch("http://localhost:5000/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -33,6 +33,7 @@ const LoginScreen = ({ props, navigation }) => {
             await AsyncStorage.setItem("token");
             if (token) {
               console.log("200 : token valid --> direct to home");
+              console.log("200 : token is " + token);
               props.navigation.navigate("Home");
             } else {
               console.log("400 : token invalid --> direct to login");
@@ -58,16 +59,16 @@ const LoginScreen = ({ props, navigation }) => {
         style={styles.inputtext}
         label="Email"
         placeholder="Please enter Email"
-        onChangeText={(email) => setText(email)}
+        onChangeText={(email) => setEmail(email)}
       />
       <TextInput
         style={styles.inputtext}
         label="Password"
         placeholder="Please enter password"
         secureTextEntry={true}
-        onChangeText={(password) => setText(password)}
+        onChangeText={(password) => setPassword(password)}
       />
-      <Button title="Submit" onPress={() => navigation.navigate("Home")} />
+      <Button title="Submit" onPress={loginAuth} />
       <Text> Don't have an account?</Text>
       <Button
         title="Sign up"
