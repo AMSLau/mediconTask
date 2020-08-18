@@ -20,7 +20,7 @@ $ git config --global user.email "your email"
 2. Pull the project to a location of your choice (try if okay there might be some authority issue)
 ```
 $ cd myDir
-$ git clone https://github.com/AMSLau/MediConCenTask
+$ git clone https://github.com/AMSLau/mediconTask
 ```
 
 3. To make sure the packages are installed. Please
