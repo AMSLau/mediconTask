@@ -39,5 +39,8 @@ $ node server.js
 $ npm start
 ```
 
-
-** Please test the application in web broswer. There is still issues which is not resolved and causing crashes while opening with ios. 
+****************************************************************************************************************************************
+*                                                                                                                                      *
+** Please test the application in web broswer. There is still issues which is not resolved and causing crashes while opening with ios.** 
+*                                                                                                                                      *
+****************************************************************************************************************************************
